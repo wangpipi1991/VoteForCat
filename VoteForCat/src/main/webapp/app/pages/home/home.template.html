@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body ng-controller="HomeController as vm">
+	<h1 class="text-center"><strong>Vote for your favorite cat</strong></h1>
+	<div class="container">
+	    <div ng-repeat="cat in vm.cats">
+	        <div class="clearfix" ng-if="$index % 4 == 0"></div>
+	        <div class="col-sm-3" style="margin-top: 40px;">
+	        	<div class="row text-center">
+	        		<img src="{{cat.img}}" width="250" height="250">
+	        	</div>
+	            <div class="row text-center">
+	        		<span style="font-size: 20px;"><strong>{{cat.count}} likes</strong></span>
+	        		<span class="glyphicon glyphicon-thumbs-up"></span>
+	        		<span></span>
+	        	</div>
+	        	<div class="row text-center">
+	        		<button type="button" class="btn btn-primary" ng-click="vm.goToVoteCatById(cat.id)">Vote For It
+	           			<span class="glyphicon glyphicon-new-window"></span>
+	           		</button>
+	        	</div>
+	        </div>
+	    </div>
+	</div>
+</body>
+</html>

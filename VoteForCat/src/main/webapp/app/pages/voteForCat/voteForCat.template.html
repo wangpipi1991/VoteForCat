@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vote for your favorite cat</title>
+</head>
+<body ng-controller="VoteForCatController as vm">
+ <div class="text-center">
+   <img src="{{vm.cat.img}}" width="400" height="400">
+ </div>
+ <div class="text-center">
+  <button type="button" class="btn btn-primary" ng-click="vm.putCatById(vm.cat.id)">Vote For It
+  	<span class="glyphicon glyphicon-hand-up"></span>
+  </button>
+ </div>
+</body>
+</html>
